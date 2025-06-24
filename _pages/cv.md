@@ -46,7 +46,8 @@ redirect_from:
   Optimized STARK proof size and verification complexity
 
 - **Cryptographer** – *Mystiko.Network*  
-  *Nov 2020 – Dec 2024*  
+  *Aug 2021 – Dec 2024, Freelance*<br>
+  *Nov 2020 – Aug 2021*  
   Built the first auditable Web3 ZK privacy layer
 
 - **Software Engineer** – *Stealth Software Technologies, Los Angeles*  
