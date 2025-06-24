@@ -85,8 +85,4 @@ redirect_from:
 - Teaching Assistant, *Security and Cryptography* – Macao Polytechnic University  
 - Teaching Assistant, *Optimization Methods* – Macao Polytechnic University  
 
----
 
-## 🌐 Let's Connect
-
-I’m open to research collaborations and technical consulting in cryptographic systems and decentralized tech. Feel free to [email me](mailto:douglas.aox.li@gmail.com) or connect on [GitHub](https://github.com/) (link your profile).
