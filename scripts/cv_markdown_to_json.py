@@ -7,11 +7,18 @@ Author: Yuan Chen
 import os
 import re
 import json
-import yaml
 import argparse
 from datetime import datetime, date
 from pathlib import Path
 import glob
+
+# Optional dependency: yaml is only required for parsing configuration or
+# front matter from other markdown files. Import lazily so that functions like
+# ``parse_markdown_cv`` can run even when PyYAML isn't installed.
+try:  # pragma: no cover
+    import yaml  # type: ignore
+except Exception:  # pragma: no cover
+    yaml = None
 
 # Custom JSON encoder to handle date objects
 class DateTimeEncoder(json.JSONEncoder):
@@ -21,45 +28,59 @@ class DateTimeEncoder(json.JSONEncoder):
         return super().default(obj)
 
 def parse_markdown_cv(md_file):
-    """Parse the markdown CV file and extract sections."""
-    with open(md_file, 'r', encoding='utf-8') as file:
+    """Parse the markdown CV file and extract top-level sections.
+
+    Older versions expected headers containing only letters, which meant
+    legitimate markdown headings such as ``## 🎓 Education`` were ignored.
+    This function now recognises ``##`` markdown headings and strips emoji and
+    other non-alphanumeric characters from the section name so that keys like
+    ``Education`` and ``Experience`` are recovered reliably.
+    """
+
+    with open(md_file, "r", encoding="utf-8") as file:
         content = file.read()
-    
-    # Remove YAML front matter
-    content = re.sub(r'^---.*?---\s*', '', content, flags=re.DOTALL)
-    
-    # Extract sections
-    sections = {}
-    current_section = None
-    section_content = []
-    
-    for line in content.split('\n'):
-        if re.match(r'^=+$', line):
+
+    # Remove YAML front matter if present
+    content = re.sub(r"^---.*?---\s*", "", content, flags=re.DOTALL)
+
+    sections: dict[str, str] = {}
+    current_section: str | None = None
+    section_content: list[str] = []
+
+    for line in content.split("\n"):
+        if re.match(r"^=+$", line):
             continue
-        
-        section_match = re.match(r'^([A-Za-z\s]+)$', line.strip())
-        if section_match and len(line.strip()) > 0:
-            if current_section:
-                sections[current_section] = '\n'.join(section_content).strip()
+
+        # Treat lines starting with '##' as section headings. Sub-headings
+        # (e.g. ###) are included as part of the section content.
+        heading_match = re.match(r"^##\s+(.*)$", line.strip())
+        if heading_match:
+            if current_section is not None:
+                sections[current_section] = "\n".join(section_content).strip()
                 section_content = []
-            current_section = section_match.group(1).strip()
-        elif current_section:
+
+            raw_heading = heading_match.group(1).strip()
+            section_name = re.sub(r"[^A-Za-z0-9\s]", "", raw_heading).strip()
+            current_section = section_name
+        elif current_section is not None:
             section_content.append(line)
-    
-    # Add the last section
-    if current_section and section_content:
-        sections[current_section] = '\n'.join(section_content).strip()
-    
+
+    if current_section is not None and section_content:
+        sections[current_section] = "\n".join(section_content).strip()
+
     return sections
 
 def parse_config(config_file):
     """Parse the Jekyll _config.yml file for additional information."""
     if not os.path.exists(config_file):
         return {}
-    
-    with open(config_file, 'r', encoding='utf-8') as file:
+
+    if yaml is None:  # pragma: no cover - PyYAML not installed
+        return {}
+
+    with open(config_file, "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
-    
+
     return config
 
 def extract_author_info(config):
@@ -258,12 +279,12 @@ def parse_publications(pub_dir):
     for pub_file in sorted(glob.glob(os.path.join(pub_dir, "*.md"))):
         with open(pub_file, 'r', encoding='utf-8') as file:
             content = file.read()
-        
+
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
+        if front_matter_match and yaml is not None:
             front_matter = yaml.safe_load(front_matter_match.group(1))
-            
+
             # Extract publication details
             pub_entry = {
                 "name": front_matter.get('title', ''),
@@ -272,7 +293,7 @@ def parse_publications(pub_dir):
                 "website": front_matter.get('paperurl', ''),
                 "summary": front_matter.get('excerpt', '')
             }
-            
+
             publications.append(pub_entry)
     
     return publications
@@ -287,12 +308,12 @@ def parse_talks(talks_dir):
     for talk_file in sorted(glob.glob(os.path.join(talks_dir, "*.md"))):
         with open(talk_file, 'r', encoding='utf-8') as file:
             content = file.read()
-        
+
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
+        if front_matter_match and yaml is not None:
             front_matter = yaml.safe_load(front_matter_match.group(1))
-            
+
             # Extract talk details
             talk_entry = {
                 "name": front_matter.get('title', ''),
@@ -301,7 +322,7 @@ def parse_talks(talks_dir):
                 "location": front_matter.get('location', ''),
                 "description": front_matter.get('excerpt', '')
             }
-            
+
             talks.append(talk_entry)
     
     return talks
@@ -316,12 +337,12 @@ def parse_teaching(teaching_dir):
     for teaching_file in sorted(glob.glob(os.path.join(teaching_dir, "*.md"))):
         with open(teaching_file, 'r', encoding='utf-8') as file:
             content = file.read()
-        
+
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
+        if front_matter_match and yaml is not None:
             front_matter = yaml.safe_load(front_matter_match.group(1))
-            
+
             # Extract teaching details
             teaching_entry = {
                 "course": front_matter.get('title', ''),
@@ -330,7 +351,7 @@ def parse_teaching(teaching_dir):
                 "role": front_matter.get('type', ''),
                 "description": front_matter.get('excerpt', '')
             }
-            
+
             teaching.append(teaching_entry)
     
     return teaching
@@ -345,12 +366,12 @@ def parse_portfolio(portfolio_dir):
     for portfolio_file in sorted(glob.glob(os.path.join(portfolio_dir, "*.md"))):
         with open(portfolio_file, 'r', encoding='utf-8') as file:
             content = file.read()
-        
+
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
+        if front_matter_match and yaml is not None:
             front_matter = yaml.safe_load(front_matter_match.group(1))
-            
+
             # Extract portfolio details
             portfolio_entry = {
                 "name": front_matter.get('title', ''),
@@ -359,7 +380,7 @@ def parse_portfolio(portfolio_dir):
                 "url": front_matter.get('permalink', ''),
                 "description": front_matter.get('excerpt', '')
             }
-            
+
             portfolio.append(portfolio_entry)
     
     return portfolio
@@ -378,9 +399,12 @@ def create_cv_json(md_file, config_file, repo_root, output_file):
     # Create the JSON structure
     cv_json = {
         "basics": author_info,
-        "work": parse_work_experience(sections.get('Work experience', '')),
-        "education": parse_education(sections.get('Education', '')),
-        "skills": parse_skills(sections.get('Skills', '')),
+        # Some CVs may label this section simply as "Experience".
+        "work": parse_work_experience(
+            sections.get("Work experience") or sections.get("Experience", "")
+        ),
+        "education": parse_education(sections.get("Education", "")),
+        "skills": parse_skills(sections.get("Skills", "")),
         "languages": [],
         "interests": [],
         "references": []
