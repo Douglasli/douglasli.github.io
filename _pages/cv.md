@@ -58,9 +58,9 @@ redirect_from:
 
 ## 📚 Selected Publications
 
+- *An Auditable Confidentiality Protocol for Blockchain Transactions*, Blockchain: Research and Applications 2025  
 - *Implementation and preliminary evaluation of an auditable confidentiality mechanism for DeFi*, ICDCSW 2023  
 - *Fully on-chain cloud storage DApp on the Internet Computer Protocol*, ICDCSW 2023  
-- *An Auditable Confidentiality Protocol for Blockchain Transactions*, SSRN 2022  
 - *Modelling of the Internet Computer Protocol Architecture*, Blockchain & Applications 2022  
 - *The Data Exchange Protocol over Multi-Chain Blockchain Using ZK Proofs*, Edge Computing and IoT 2022  
 

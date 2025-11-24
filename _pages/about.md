@@ -28,11 +28,10 @@ I'm a PhD researcher at the IMDEA Software Institute working on applied cryptogr
 ## ☕ Hobbies
 
 Outside of research, I enjoy:
-
-- **Hiking** — Exploring trails and scenic landscapes helps me reset and recharge.  
-- **Tennis** — I love the strategic and physical challenge of the sport.  
-- **Coffee** — A good espresso or pour-over sparks both conversation and contemplation.  
-- **Photography** — I document moments from everyday life and travel, often through street photography and film-style aesthetics.
+Hiking, 
+Tennis,
+Coffee,
+Photography
 
 ---
 
