@@ -11,7 +11,7 @@ I'm a PhD researcher at the IMDEA Software Institute working on applied cryptogr
 
 ---
 
-## 🔬 Research Interests
+## Research Interests
 
 - **Cryptography & Theoretical Foundations**  
   Zero-knowledge proofs, privacy-preserving protocols, STARKs, verifiable computation,  
@@ -25,16 +25,21 @@ I'm a PhD researcher at the IMDEA Software Institute working on applied cryptogr
 
 ---
 
-## ☕ Hobbies
-
-Outside of research, I enjoy:
-Hiking, 
-Tennis,
-Coffee,
-Photography
+## Academic Services
+- Subreviewer for Eurocrypt 2026, CHES 2026, INFOCOM 2023, Eurocrypt 2019
 
 ---
 
-## 🌐 Let's Connect
+## Hobbies
+
+Outside of research, I enjoy:
+hiking, 
+tennis,
+coffee,
+and photography
+
+---
+
+## Let's Connect
 
 I’m open to research collaborations and technical consulting in cryptographic systems and decentralized tech. Feel free to [email me](mailto:aoxuan.li at imdea.org).
