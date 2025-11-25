@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a PhD researcher at the IMDEA Software Institute working on applied cryptography, blockchain technologies, and privacy-preserving protocols. My journey spans academic research, industry collaborations, and open-source contributions in cryptographic protocol design, zero-knowledge proofs, and decentralized systems.
+PhD researcher at [IMDEA Software Institute](https://software.imdea.org) focused on applied cryptography, blockchain, and privacy-preserving systems (advised by Prof. [Dario Fiore](https://www.dariofiore.it/)). Previously at [UCLA](https://cs.ucla.edu) with Prof. [Rafail Ostrovsky](https://web.cs.ucla.edu/~rafail/). I work on cryptographic protocols, ZK proofs, and decentralized systems across research and industry.
 
 ---
 
