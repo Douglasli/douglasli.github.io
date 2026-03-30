@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-PhD researcher at [IMDEA Software Institute](https://software.imdea.org) focused on applied cryptography, blockchain, and privacy-preserving systems (advised by Prof. [Dario Fiore](https://www.dariofiore.it/)). Previously at [UCLA](https://cs.ucla.edu) with Prof. [Rafail Ostrovsky](https://web.cs.ucla.edu/~rafail/). I work on cryptographic protocols, ZK proofs, and decentralized systems across research and industry.
+I am a PhD student in Computer Science at the [IMDEA Software Institute](https://software.imdea.org/) in Madrid, Spain, where I am advised by [Prof. Dario Fiore](https://www.dariofiore.it/). My research interests lie in the intersection of theoretical and applied cryptography, specifically focusing on hash-based polynomial commitments and verifiable computation for  homomorphic encryption.
+
+Previously, I was a Cryptographer at [ExpandZK (Mystiko.Network)](https://expandzk.com/), where I designed the core protocol that achieved over $280M in total trading volume and $1M transactions within its first year. My work focused on architecting decentralized auditing committee mechanisms and optimizing ZK-Rollup batching to reduce on-chain data costs by up to 90%. In 2019, I received an MS in Computer Science from the [University of California, Los Angeles (UCLA)](https://www.ucla.edu/), where I was advised by [Prof. Rafail Ostrovsky](https://web.cs.ucla.edu/~rafail/) toward my Master's Thesis titled "On Explicit Depth Robust Graphs".
 
 ---
 
