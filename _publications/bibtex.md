@@ -27,26 +27,6 @@ Li, Aoxuan, "**On explicit depth robust graphs**," Master's thesis, *University 
 
 {% endraw %}
 
-## [tse2017detection](#tse2017detection)
-
-Tse, Rita, Li, AoXuan, Chui, Zachary, and Im, Marcus, "**Detection and Recognition of Sign Language Protocol using Motion Sensing Device**," In *Future Technologies Conference (FTC) 2017*. 2017.
-
-[](#tse2017detectionBib)
-**BibTeX entry:**
-
-{% raw %}
-
-```bibtex
-@INPROCEEDINGS {tse2017detection,
-      title={Detection and Recognition of Sign Language Protocol using Motion Sensing Device},
-      author={Tse, Rita and Li, AoXuan and Chui, Zachary and Im, Marcus},
-      booktitle={Future Technologies Conference (FTC) 2017},
-      year={2017}
-}
-```
-
-{% endraw %}
-
 ## [serena2022simulation](#serena2022simulation)
 
 Serena, Luca, Li, AoXuan, Zichichi, Mirko, D’Angelo, Gabriele, Ferretti, Stefano, and Tang, Su-Kit, "**Simulation of the internet computer protocol: the next generation multi-blockchain architecture**," In *2022 IEEE/ACM 26th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)*. 2022, pp. 119-126.
@@ -84,28 +64,6 @@ Li, Aoxuan, D'Angelo, Gabriele, Tang, Su-Kit, Fang, Frank, and Gong, Baron, "**A
       author={Li, Aoxuan and D'Angelo, Gabriele and Tang, Su-Kit and Fang, Frank and Gong, Baron},
       journal={Blockchain: Research and Applications},
       year={2025}
-}
-```
-
-{% endraw %}
-
-## [li2022modelling](#li2022modelling)
-
-Li, AoXuan, Serena, Luca, Zichichi, Mirko, Tang, Su-Kit, D’Angelo, Gabriele, and Ferretti, Stefano, "**Modelling of the internet computer protocol architecture: The next generation blockchain**," In *International Congress on Blockchain and Applications*. 2022, pp. 3-12.
-
-[](#li2022modellingBib)
-**BibTeX entry:**
-
-{% raw %}
-
-```bibtex
-@INPROCEEDINGS {li2022modelling,
-      title={Modelling of the internet computer protocol architecture: The next generation blockchain},
-      author={Li, AoXuan and Serena, Luca and Zichichi, Mirko and Tang, Su-Kit and D’Angelo, Gabriele and Ferretti, Stefano},
-      booktitle={International Congress on Blockchain and Applications},
-      pages={3--12},
-      year={2022},
-      organization={Springer International Publishing Cham}
 }
 ```
 
