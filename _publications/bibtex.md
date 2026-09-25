@@ -7,6 +7,28 @@ doi-color: '#fcab22'
 acrobat-color: '#f70e0c'
 blogger-color: '#F37100'
 ---
+## [rako2026refin](#rako2026refin)
+
+Rakotonirina, Itsaka, Gomez-Martinez, Javier, Li, Aoxuan, Moreno-Sanchez, Pedro, and Schneidewind, Clara, "[**Refinement-based Verification of Cryptographic Protocol with Quantitative Values**](https://www.sigsac.org/ccs/CCS2026/program/accepted-papers.html)," In *ACM Conference on Computer and Communications Security (CCS)*, 2026 (accepted; to appear).
+
+[](#rako2026refinBib)
+**BibTeX entry:**
+
+{% raw %}
+
+```bibtex
+@INPROCEEDINGS {rako2026refin,
+      title={Refinement-based Verification of Cryptographic Protocol with Quantitative Values},
+      author={Rakotonirina, Itsaka and Gomez-Martinez, Javier and Li, Aoxuan and Moreno-Sanchez, Pedro and Schneidewind, Clara},
+      booktitle={ACM Conference on Computer and Communications Security (CCS)},
+      year={2026},
+      note={Accepted; to appear},
+      url={https://www.sigsac.org/ccs/CCS2026/program/accepted-papers.html}
+}
+```
+
+{% endraw %}
+
 ## [li2019explicit](#li2019explicit)
 
 Li, Aoxuan, "**On explicit depth robust graphs**," Master's thesis, *University of California, Los Angeles* 2019.
@@ -51,7 +73,7 @@ Serena, Luca, Li, AoXuan, Zichichi, Mirko, D’Angelo, Gabriele, Ferretti, Stefa
 
 ## [li2025auditable](#li2025auditable)
 
-Li, Aoxuan, D'Angelo, Gabriele, Tang, Su-Kit, Fang, Frank, and Gong, Baron, "**An Auditable Confidentiality Protocol for Blockchain Transactions**," *Blockchain: Research and Applications*, 2025.
+Li, Aoxuan, D'Angelo, Gabriele, Tang, Su-Kit, Fang, Frank, and Gong, Baron, "[**An Auditable Confidentiality Protocol for Blockchain Transactions**](https://doi.org/10.1016/j.bcra.2025.100380)," *Blockchain: Research and Applications*, article 100380, 2025.
 
 [](#li2025auditableBib)
 **BibTeX entry:**
@@ -63,7 +85,10 @@ Li, Aoxuan, D'Angelo, Gabriele, Tang, Su-Kit, Fang, Frank, and Gong, Baron, "**A
       title={An Auditable Confidentiality Protocol for Blockchain Transactions},
       author={Li, Aoxuan and D'Angelo, Gabriele and Tang, Su-Kit and Fang, Frank and Gong, Baron},
       journal={Blockchain: Research and Applications},
-      year={2025}
+      pages={100380},
+      year={2025},
+      doi={10.1016/j.bcra.2025.100380},
+      url={https://doi.org/10.1016/j.bcra.2025.100380}
 }
 ```
 
@@ -112,4 +137,3 @@ Tang, Kaiyuan, Li, AoXuan, and Tang, Su-Kit, "**Fully On-chain Cloud Storage DAp
 ```
 
 {% endraw %}
-
