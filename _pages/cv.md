@@ -34,8 +34,8 @@ December 2024–present
 - Research succinct proof systems, polynomial commitments, and verifiable computation, with a focus on privacy-preserving and trustworthy AI.
 - Contributed to the case study for refinement-based verification of cryptographic protocols with quantitative values; co-author of the ACM CCS 2026 paper (to appear).
 
-### Incoming — Frontier AI Security Residency
-**ERA, Cambridge, UK** · October–December 2026
+### Frontier AI Security Residency
+**ERA, Cambridge, UK** · October 2026–present
 
 ### Researcher — Macao Polytechnic University and University of Bologna
 Macao and Italy · August 2021–August 2024
@@ -89,5 +89,5 @@ January 2018–June 2019
 
 ## Academic Service
 
-**Subreviewer:** Eurocrypt (2026, 2019), CHES (2026), and INFOCOM (2023).<br>
+**Subreviewer:** Eurocrypt (2027, 2026, 2019), Asiacrypt (2026), CHES (2026), and INFOCOM (2023).<br>
 **Teaching Assistant:** Security and Cryptography; Optimization Methods, Macao Polytechnic University.

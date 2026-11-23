@@ -22,7 +22,7 @@ My research spans succinct proof systems, polynomial commitments, and verifiable
 </div>
 
 <section class="residency" aria-labelledby="residency-title">
-  <p class="residency__meta">INCOMING · OCTOBER–DECEMBER 2026</p>
+  <p class="residency__meta">CURRENT · OCTOBER 2026–PRESENT</p>
   <h2 id="residency-title">Frontier AI Security Residency</h2>
   <p>ERA · Cambridge, UK</p>
 </section>
@@ -83,7 +83,7 @@ I contributed to the case study in this joint work with Itsaka Rakotonirina, Jav
 
 I received my MS in Computer Science from [UCLA](https://www.ucla.edu/) in June 2019. My thesis, *On Explicit Depth Robust Graphs*, was advised by [Prof. Rafail Ostrovsky](https://web.cs.ucla.edu/~rafail/). I completed my BS in Computing at Macao Polytechnic Institute in 2017.
 
-**Subreviewer:** Eurocrypt (2026, 2019), CHES (2026), and INFOCOM (2023).<br>
+**Subreviewer:** Eurocrypt (2027, 2026, 2019), Asiacrypt (2026), CHES (2026), and INFOCOM (2023).<br>
 **Teaching Assistant:** Security and Cryptography; Optimization Methods, Macao Polytechnic University.
 
 ## Get in Touch
